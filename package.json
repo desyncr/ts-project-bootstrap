@@ -1,0 +1,27 @@
+{
+  "name": "ts-example-project",
+  "version": "1.0.0",
+  "description": "Example typescript project",
+  "repository": "http://github.com/desyncr/ts-example-project",
+  "main": "lib/main.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc",
+    "build:live": "./node_modules/.bin/nodemon --exec \"npm build && npm test\"",
+    "test": "./node_modules/.bin/mocha --compilers ts:node_modules/espower-typescript/guess test/**/*.ts",
+    "test:live": "./node_modules/.bin/mocha -w --compilers ts:node_modules/espower-typescript/guess test/**/*.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.28",
+    "chai": "^4.0.2",
+    "espower-typescript": "^8.0.0",
+    "mocha": "^2.4.5",
+    "typescript": "^2.3.4"
+  },
+  "typings": "lib/index.d.ts"
+}
