@@ -1,4 +1,3 @@
-import * as assert from 'power-assert';
 import { expect } from 'chai';
 
 import Api from '../src/main'
